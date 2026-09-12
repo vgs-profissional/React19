@@ -14,6 +14,15 @@ function FormularioDeEvento() {
   )
 }
 
+// function Teste() {
+//   let tres = 3
+//   if (tres == 3) {
+//     return (<h1>Três é igual a 3</h1>)
+//   } else {
+//     return (<h1>Três não é igual a 3</h1>)
+//   }
+// }
+
 function App() {
 
   return (
@@ -25,6 +34,7 @@ function App() {
         <img src="./public/banner.png" alt="" />
       </section>
       <FormularioDeEvento />
+      {/* <Teste /> */}
     </main>
   )
 }
