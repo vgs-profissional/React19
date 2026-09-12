@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
   --cor-fundo-corpo: #06151A;
   --cor-fundo-form: #212121;
@@ -44,7 +46,7 @@ section img {
   background-color: var(--cor-fundo-form);
 
   color: var(--cor-textos);
-  font-family: 'Orbitron';
+  font-family: 'work-sans';
 }
 
 form fieldset {
