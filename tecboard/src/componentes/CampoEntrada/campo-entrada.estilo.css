@@ -1,0 +1,10 @@
+form fieldset input {
+    border-radius: 8px;
+    border-color: var(--cor-destaque);
+
+    background-color: var(--cor-fundo-form);
+
+    margin: 8px 0 0 0;
+
+    color: var(--cor-textos);
+}

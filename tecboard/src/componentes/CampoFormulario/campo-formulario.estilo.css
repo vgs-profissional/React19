@@ -1,0 +1,7 @@
+form fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 328px;
+    border: none;
+    padding: 32px 28px;
+}

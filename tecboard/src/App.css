@@ -6,6 +6,8 @@
   --cor-texto-secundario: #33353f;
   --cor-textos: #fff;
   --cor-destaque: #17d9b1;
+
+  --tamanho-fonte-h2: 1.25rem;
 }
 
 body {
@@ -29,37 +31,4 @@ section {
 
 section img {
   max-width: 90%;
-}
-
-.formulario-evento {
-  width: 384px;
-  max-width: 90%;
-  margin: 64px auto;
-  padding: 32px 28px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border-radius: 16px;
-
-  background-color: var(--cor-fundo-form);
-
-  color: var(--cor-textos);
-  font-family: 'Work Sans', sans-serif;
-}
-
-form fieldset {
-  display: flex;
-  flex-direction: column;
-  width: 328px;
-  border: none;
-}
-
-form fieldset input {
-  border-radius: 8px;
-  border-color: var(--cor-destaque);
-  background-color: var(--cor-fundo-form);
-  margin: 8px 0 0 0;
-  color: var(--cor-textos);
 }
