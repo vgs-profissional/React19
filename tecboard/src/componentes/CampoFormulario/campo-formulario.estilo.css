@@ -5,3 +5,9 @@ form fieldset {
     border: none;
     padding: 32px 28px;
 }
+
+.campos {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}

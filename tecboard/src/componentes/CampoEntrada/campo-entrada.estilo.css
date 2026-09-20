@@ -1,10 +1,21 @@
-form fieldset input {
+.campo-entrada {
+    border: 1px solid transparent;
+
+    /* background-color: transparent; */
+    background:
+        linear-gradient(#fff, 0%, #212121) padding-box,
+        linear-gradient(180deg, var(--cor-destaque), #091D24) border-box;
     border-radius: 8px;
-    border-color: var(--cor-destaque);
-
-    background-color: var(--cor-fundo-form);
-
-    margin: 8px 0 0 0;
+    padding: 8px 0 8px 16px;
 
     color: var(--cor-textos);
+
+}
+
+.campo-entrada::placeholder {
+    background: linear-gradient(180deg, var(--cor-destaque), #091D24);
+    background-clip: text;
+
+    color: transparent;
+    font-size: 16px;
 }
