@@ -68,7 +68,16 @@ function App() {
       </header>
       <Banner />
       <FormularioDeEvento />
-      <section className='secao-titulo'>
+      {/* Map retorna array alterada, passe item pra ele dar um indice pra cada */}
+      {temas.map(function (item) {
+        return (
+          // Aqui ele pegou as propriedades do objeto de cada item e exige que cada item seja unico
+          <section key={item.id} className='secao-titulo'>
+            <Tema tema={item} />
+          </section>)
+      })}
+      {/* //#region antigo tema */}
+      {/* <section className='secao-titulo'>
         <Tema tema={temas[0]} />
       </section>
       <section className='secao-titulo'>
@@ -85,7 +94,8 @@ function App() {
       </section>
       <section className='secao-titulo'>
         <Tema tema={temas[0]} />
-      </section>
+      </section> */}
+      {/* //#endregion */}
       {/* <Teste /> */}
     </main>
   )
