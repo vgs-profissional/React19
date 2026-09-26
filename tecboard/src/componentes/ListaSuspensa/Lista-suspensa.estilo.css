@@ -1,0 +1,15 @@
+.selecao-tema {
+    border: 1px solid transparent;
+    background:
+        linear-gradient(#fff, 0%, var(--cor-fundo-form)) padding-box,
+        linear-gradient(180deg, var(--cor-destaque), #091d24) border-box;
+    border-radius: 8px;
+    padding: 8px 0 8px 16px;
+
+    color: var(--cor-textos);
+    font-size: 16px;
+}
+
+.selecao-tema option {
+    background-color: var(--cor-fundo-form)
+}

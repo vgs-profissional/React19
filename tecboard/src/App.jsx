@@ -1,5 +1,7 @@
 import './App.css'
+import { Banner } from './componentes/banner'
 import { FormularioDeEvento } from './componentes/FormularioEvento'
+import { Tema } from './componentes/Tema'
 
 //#region 
 //Componentes são funções
@@ -33,15 +35,57 @@ import { FormularioDeEvento } from './componentes/FormularioEvento'
 
 // Chamada final, chame todos os componentes de sessão aqui
 function App() {
+  const temas = [
+    {
+      id: 1,
+      nome: 'front-end'
+    },
+    {
+      id: 2,
+      nome: 'backend'
+    },
+    {
+      id: 3,
+      nome: 'devops'
+    },
+    {
+      id: 4,
+      nome: 'inteligência artificial'
+    },
+    {
+      id: 5,
+      nome: 'data science'
+    },
+    {
+      id: 6,
+      nome: 'cloud'
+    },
+  ]
   return (
     <main>
       <header>
         <img src="./public/logo.png" alt="Logo da tecboard" />
       </header>
-      <section>
-        <img src="./public/banner.png" alt="Pessoa com óculos de realidade virtual" />
-      </section>
+      <Banner />
       <FormularioDeEvento />
+      <section className='secao-titulo'>
+        <Tema tema={temas[0]} />
+      </section>
+      <section className='secao-titulo'>
+        <Tema tema={temas[1]} />
+      </section>
+      <section className='secao-titulo'>
+        <Tema tema={temas[2]} />
+      </section>
+      <section className='secao-titulo'>
+        <Tema tema={temas[3]} />
+      </section>
+      <section className='secao-titulo'>
+        <Tema tema={temas[4]} />
+      </section>
+      <section className='secao-titulo'>
+        <Tema tema={temas[0]} />
+      </section>
       {/* <Teste /> */}
     </main>
   )

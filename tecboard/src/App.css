@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap'); */
 
 :root {
   --cor-fundo-corpo: #06151A;
@@ -23,12 +23,3 @@ header {
   justify-content: center;
 }
 
-section {
-  background-image: linear-gradient(180deg, var(--cor-destaque) 0%, var(--cor-fundo-corpo) 100%);
-  display: flex;
-  justify-content: center;
-}
-
-section img {
-  max-width: 90%;
-}
