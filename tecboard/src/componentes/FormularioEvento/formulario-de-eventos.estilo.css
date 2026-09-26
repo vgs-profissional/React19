@@ -1,0 +1,17 @@
+.formulario-evento {
+    width: 384px;
+    max-width: 90%;
+    margin: 64px auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    border-radius: 16px;
+
+    background-color: var(--cor-fundo-form);
+
+    color: var(--cor-textos);
+    font-family: 'Work Sans', sans-serif;
+}

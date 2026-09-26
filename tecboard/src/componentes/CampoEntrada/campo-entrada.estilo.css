@@ -1,0 +1,20 @@
+.campo-entrada {
+    border: 1px solid transparent;
+
+    /* background-color: transparent; */
+    background:
+        linear-gradient(#fff, 0%, #212121) padding-box,
+        linear-gradient(180deg, var(--cor-destaque), #091D24) border-box;
+    border-radius: 8px;
+    padding: 8px 0 8px 16px;
+
+    color: var(--cor-textos);
+    font-size: 16px;
+}
+
+.campo-entrada::placeholder {
+    background: linear-gradient(180deg, var(--cor-destaque), #091D24);
+    background-clip: text;
+
+    color: transparent;
+}
