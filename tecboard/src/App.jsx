@@ -1,5 +1,6 @@
 import './App.css'
-import { Banner } from './componentes/banner'
+import { Banner } from './componentes/Banner'
+import { CardEvento } from './componentes/Cards'
 import { FormularioDeEvento } from './componentes/FormularioEvento'
 import { Tema } from './componentes/Tema'
 
@@ -61,6 +62,16 @@ function App() {
       nome: 'cloud'
     },
   ]
+
+  const eventos = [
+    {
+      capa: 'https://raw.githubusercontent.com/viniciosneves/tecboard-assets/refs/heads/main/imagem_1.png',
+      tema: temas[0],
+      data: new Date(),
+      titulo: 'Mulheres no Front',
+      descricao: 'Valorizando e impulsionando a participação feminina no desenvolvimento front-end.'
+    },
+  ]
   return (
     <main>
       <header>
@@ -74,6 +85,7 @@ function App() {
           // Aqui ele pegou as propriedades do objeto de cada item e exige que cada item seja unico
           <section key={item.id} className='secao-titulo'>
             <Tema tema={item} />
+            <CardEvento evento={eventos[0]} />
           </section>)
       })}
       {/* //#region antigo tema */}
@@ -95,7 +107,7 @@ function App() {
       <section className='secao-titulo'>
         <Tema tema={temas[0]} />
       </section> */}
-      {/* //#endregion */}
+      {/* //#endregion Antigo tema */}
       {/* <Teste /> */}
     </main>
   )
