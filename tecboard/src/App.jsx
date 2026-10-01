@@ -69,7 +69,7 @@ function App() {
       tema: temas[0],
       data: new Date(),
       titulo: 'Mulheres no Front',
-      descricao: 'Valorizando e impulsionando a participação feminina no desenvolvimento front-end.'
+      // descricao: 'Valorizando e impulsionando a participação feminina no desenvolvimento front-end.'
     },
   ]
   return (
@@ -78,7 +78,8 @@ function App() {
         <img src="./public/logo.png" alt="Logo da tecboard" />
       </header>
       <Banner />
-      <FormularioDeEvento />
+      {/* O primeiro tem o mesmo nome doq vai ta la no index, o segundo tem q ter o nome da lista aqui nesse arquivo */}
+      <FormularioDeEvento temas={temas} />
       {/* Map retorna array alterada, passe item pra ele dar um indice pra cada */}
       {temas.map(function (item) {
         return (
@@ -88,27 +89,6 @@ function App() {
             <CardEvento evento={eventos[0]} />
           </section>)
       })}
-      {/* //#region antigo tema */}
-      {/* <section className='secao-titulo'>
-        <Tema tema={temas[0]} />
-      </section>
-      <section className='secao-titulo'>
-        <Tema tema={temas[1]} />
-      </section>
-      <section className='secao-titulo'>
-        <Tema tema={temas[2]} />
-      </section>
-      <section className='secao-titulo'>
-        <Tema tema={temas[3]} />
-      </section>
-      <section className='secao-titulo'>
-        <Tema tema={temas[4]} />
-      </section>
-      <section className='secao-titulo'>
-        <Tema tema={temas[0]} />
-      </section> */}
-      {/* //#endregion Antigo tema */}
-      {/* <Teste /> */}
     </main>
   )
 }
