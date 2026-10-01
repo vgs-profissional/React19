@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 import { Banner } from './componentes/Banner'
 import { CardEvento } from './componentes/Cards'
@@ -63,15 +64,22 @@ function App() {
     },
   ]
 
-  const eventos = [
-    {
+  const [eventos, setEvento] = useState(
+    [{
       capa: 'https://raw.githubusercontent.com/viniciosneves/tecboard-assets/refs/heads/main/imagem_1.png',
       tema: temas[0],
       data: new Date(),
       titulo: 'Mulheres no Front',
       // descricao: 'Valorizando e impulsionando a participação feminina no desenvolvimento front-end.'
-    },
-  ]
+    }]
+  )
+
+  function criarEvento(evento) {
+    // eventos.push(evento)
+    setEvento([...eventos, evento])
+    console.log(eventos);
+  }
+
   return (
     <main>
       <header>
@@ -79,14 +87,17 @@ function App() {
       </header>
       <Banner />
       {/* O primeiro tem o mesmo nome doq vai ta la no index, o segundo tem q ter o nome da lista aqui nesse arquivo */}
-      <FormularioDeEvento temas={temas} />
+      <FormularioDeEvento temas={temas} aoSubmeter={criarEvento} />
       {/* Map retorna array alterada, passe item pra ele dar um indice pra cada */}
       {temas.map(function (item) {
         return (
           // Aqui ele pegou as propriedades do objeto de cada item e exige que cada item seja unico
           <section key={item.id} className='secao-titulo'>
             <Tema tema={item} />
-            <CardEvento evento={eventos[0]} />
+            {eventos.map(function (item, index) {
+              return <CardEvento evento={item} key={index} />
+            }
+            )}
           </section>)
       })}
     </main>

@@ -6,7 +6,7 @@ import { Botao } from "../Botao";
 import { ListaSuspensa } from "../ListaSuspensa/Lista-suspensa";
 import './formulario-de-eventos.estilo.css'
 
-export function FormularioDeEvento({ temas }) {
+export function FormularioDeEvento({ temas, aoSubmeter }) {
     function aoFormSubmetido(formData) {
         const evento =
         {
@@ -20,7 +20,7 @@ export function FormularioDeEvento({ temas }) {
             data: new Date(formData.get('dataEvento')),
             titulo: formData.get('nomeEvento')
         }
-        console.log('Dados coletados: ', evento);
+        aoSubmeter(evento);
     }
 
     return (
