@@ -13,8 +13,9 @@
 }
 
 .campo-entrada::placeholder {
-    background: linear-gradient(180deg, var(--cor-destaque), #091D24);
-    background-clip: text;
+    /* background: linear-gradient(180deg, var(--cor-destaque), #091D24);
+    background-clip: text; */
 
-    color: transparent;
+    /* color: transparent; */
+    color: white;
 }

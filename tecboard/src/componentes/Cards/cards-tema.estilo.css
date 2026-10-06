@@ -1,0 +1,58 @@
+.evento-card {
+    width: 282px;
+    color: white;
+    background-color: var(--cor-fundo-form);
+    border-radius: 4px;
+
+    margin: 32px 0;
+}
+
+.evento-card div {
+    padding: 24px 16px;
+}
+
+.cabecalho-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.cabecalho-card img {
+    width: 282px;
+}
+
+.card-tag {
+    background-image: linear-gradient(180deg, var(--cor-destaque) 0%, var(--cor-fundo-corpo) 100%);
+    border-radius: 4px;
+
+    padding: 8px;
+    margin: 8px 0;
+    width: 94px;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--fonte-titulos);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.card-data {
+    font-size: 13px;
+
+    margin: 0;
+}
+
+.card-titulo {
+    font-size: 25px;
+    font-family: var(--fonte-titulos);
+    letter-spacing: 10%;
+
+    padding: 8px 0;
+    margin: 0;
+}
+
+.rodape-card p {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}

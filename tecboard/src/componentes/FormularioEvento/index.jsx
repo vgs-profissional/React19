@@ -3,12 +3,28 @@ import { CampoFormulario } from "../CampoFormulario";
 import { Label } from "../Label";
 import { TituloFormulario } from "../TituloFormulario";
 import { Botao } from "../Botao";
-import { Select } from "../ListaSuspensa/Lista-suspensa";
+import { ListaSuspensa } from "../ListaSuspensa/Lista-suspensa";
 import './formulario-de-eventos.estilo.css'
 
-export function FormularioDeEvento() {
+export function FormularioDeEvento({ temas, aoSubmeter }) {
+    function aoFormSubmetido(formData) {
+        const evento =
+        {
+            // Pega dado do campo chamado capaEvento  
+            capa: formData.get('capaEvento'),
+            tema: temas.find(function (item) {
+                return item.id == formData.get('tema')
+                // Acha na lista de temas um item(obj) que tenha um id correspondente
+                // se tiver ele pega o objeto e guarda no tema
+            }),
+            data: new Date(formData.get('dataEvento')),
+            titulo: formData.get('nomeEvento')
+        }
+        aoSubmeter(evento);
+    }
+
     return (
-        <form className='formulario-evento' action="#">
+        <form className='formulario-evento' action={aoFormSubmetido}>
             <TituloFormulario>
                 Preencha para criar o evento:
             </TituloFormulario>
@@ -21,26 +37,29 @@ export function FormularioDeEvento() {
                         type="text"
                         id="nome"
                         placeholder='Summer dev hits'
-                        name='nomeFormulario'
-                        required />
+                        name='nomeEvento'
+                    // required
+                    />
+                    <Label>
+                        Qual a URL da imagem de capa?
+                    </Label>
+                    <CampoEntrada
+                        type='text'
+                        id='capa'
+                        name='capaEvento'
+                        placeholder="http://..."
+                    // required
+                    />
                     <Label htmlFor='data'>Data do evento</Label>
                     <CampoEntrada
                         type='date'
                         id='data'
                         placeholder='XX/XX/XXXX'
-                        name='dataFormulario'
-                        required
+                        name='dataEvento'
+                    // required
                     />
-                    <Label htmlFor='selecaoTema'>Tema do evento</Label>
-                    <Select id='selecaoTema' name='temaEvento' required>
-                        <option value="#">Selecione uma opção</option>
-                        <option value="ia">Ia</option>
-                        <option value="front-end">Front-end</option>
-                        <option value="backend">Backend</option>
-                        <option value="devops">Devops</option>
-                        <option value="data-science">Data Science</option>
-                        <option value="cloud">Cloud</option>
-                    </Select>
+                    <Label htmlFor='tema'>Tema do evento</Label>
+                    <ListaSuspensa id='temaEvento' name='tema' temas={temas} />
                 </div>
                 <Botao>
                     Criar evento

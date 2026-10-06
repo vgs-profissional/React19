@@ -1,0 +1,13 @@
+.titulo-tema {
+    font-family: 'Orbitron';
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 10%;
+    margin: 0;
+}
+
+.secao-titulo {
+    background-color: transparent;
+}

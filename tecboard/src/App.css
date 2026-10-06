@@ -7,6 +7,9 @@
   --cor-textos: #fff;
   --cor-destaque: #17d9b1;
 
+  --fonte-corpo: 'Work Sans', sans-serif;
+  --fonte-titulos: 'Orbitron', sans-serif;
+
   --tamanho-fonte-h2: 1.25rem;
 }
 
@@ -22,4 +25,3 @@ header {
   display: flex;
   justify-content: center;
 }
-
