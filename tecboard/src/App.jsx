@@ -89,17 +89,28 @@ function App() {
       {/* O primeiro tem o mesmo nome doq vai ta la no index, o segundo tem q ter o nome da lista aqui nesse arquivo */}
       <FormularioDeEvento temas={temas} aoSubmeter={criarEvento} />
       {/* Map retorna array alterada, passe item pra ele dar um indice pra cada */}
-      {temas.map(function (item) {
-        return (
-          // Aqui ele pegou as propriedades do objeto de cada item e exige que cada item seja unico
-          <section key={item.id} className='secao-titulo'>
-            <Tema tema={item} />
-            {eventos.map(function (item, index) {
-              return <CardEvento evento={item} key={index} />
-            }
-            )}
-          </section>)
-      })}
+      <section className="container">
+        {temas.map(function (tema) {
+          if (!eventos.some(function (evento) {
+            return evento.tema.id == tema.id
+          })) {
+            return null
+          }
+          return (
+            // Aqui ele pegou as propriedades do objeto de cada item e exige que cada item seja unico
+            <section key={tema.id} className='secao-titulo'>
+              <Tema tema={tema} />
+              <div className="eventos">
+                {eventos.filter(function (evento) {
+                  return evento.tema.id == tema.id
+                }).map(function (evento, indice) {
+                  return <CardEvento evento={evento} key={indice} />
+                }
+                )}
+              </div>
+            </section>)
+        })}
+      </section>
     </main>
   )
 }
