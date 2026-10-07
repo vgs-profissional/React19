@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import { Banner } from './componentes/Banner'
+import { Banner } from './componentes/banner'
 import { CardEvento } from './componentes/Cards'
 import { FormularioDeEvento } from './componentes/FormularioEvento'
 import { Tema } from './componentes/Tema'
