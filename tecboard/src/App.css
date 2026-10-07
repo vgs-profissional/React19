@@ -25,3 +25,15 @@ header {
   display: flex;
   justify-content: center;
 }
+
+.container {
+  width: 1200px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.eventos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
